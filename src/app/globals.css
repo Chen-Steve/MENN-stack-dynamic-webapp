@@ -1,27 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* Global Variables */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* TODO: Replace these placeholders with actual values */
+  --primary: #PLACEHOLDER_FOR_PRIMARY;
+  --background: #PLACEHOLDER_FOR_BACKGROUND;
+  --light-bg: #PLACEHOLDER_FOR_LIGHT_BG;
+  --lightest-bg: #PLACEHOLDER_FOR_LIGHTEST_BG;
+  --description: #PLACEHOLDER_FOR_DESCRIPTION;
+  --title: #PLACEHOLDER_FOR_TITLE;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Reset and Base Styles */
+html, body {
+  margin: 0;
+  height: 100vh;
+  scroll-behavior: smooth;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--title);
+}
+
+ul {
+  list-style: none;
+  margin-left: -40px;
+}
+
+b {
+  font-size: 17px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Stylizing the browser's default Scrollbar */
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--light-bg) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-bg);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--lightest-bg);
+  border-radius: 14px;
+  border: 1px dashed var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
 }

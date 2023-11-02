@@ -1,0 +1,44 @@
+.main {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    padding:0;
+  }
+  
+  .main-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  #content {
+    /* padding: 80px 200px; */
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .rs-steps-horizontal .rs-steps-item-content {
+    text-align: left;
+  }
+  
+  #content::selection {
+    background: var(--lightest-bg); /* WebKit/Blink Browsers */
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .main-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .main {
+      flex-direction: column;
+      padding: 40px 24px;
+    }
+  
+    #content {
+      padding: 10px 10px;
+      width: 100%;
+    }
+}

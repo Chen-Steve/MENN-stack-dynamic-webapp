@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.navbarItems {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbarItem {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.navbarItem:hover {
+  color: #555;
+}
+
+.donate {
+  border: 2px solid black;
+  color: black;
+  padding: 0.48rem 0.98rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.donate:hover {
+  background-color:rgb(152, 145, 145);
+}
+
+.volunteer {
+  border: 2px solid black;
+  color: black;
+  padding: 0.48rem 0.98rem; 
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.volunteer:hover {
+  background-color: rgb(221, 213, 213);
+}

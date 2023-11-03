@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from '../styles/Features.module.css';
+import Image from 'next/image';
 
 const Features: React.FC = () => {
   return (
     <div className={styles.featuresContainer}>
         <div className={styles.imageArea}>
-            <img src="/veteran_education.png" alt="Statistic: Number of veterans in the United States in 2021, by educational attainment | Statista"/>
+            <Image src="/veteran_education.png" alt="Statistic: Number of veterans in the United States in 2021, by educational attainment | Statista"/>
         </div>
     <div className={styles.textArea}>
       <div className={styles.featureBlock}>

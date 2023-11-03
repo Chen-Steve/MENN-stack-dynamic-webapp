@@ -1,0 +1,59 @@
+.featuresContainer {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px; /* You can adjust this as needed */
+    margin: 0 auto;
+    padding: 4.5rem 0;
+    gap: 2rem; /* Spacing between the image and text content */
+  }
+
+  .imageArea {
+    width: 40%; 
+    height: auto;
+    max-width: 100%;
+    margin-right: 320px;
+    margin-left: -150px;
+    transform: scale(0.65);  /* scales the element to 80% of its original size */
+    margin-top: -120px;
+  }
+  
+  
+  .textArea {
+    flex: 1; /* Takes up the remaining space */
+    position: relative;
+    margin-right: 20px;
+  }
+
+  .textArea::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -4.3rem; /* Adjust the position as needed to place the line where you want */
+    width: 2px;  /* Width of the line */
+    background-color: black; /* Color of the line */
+}
+
+  .featureBlock {
+    margin-bottom: 3rem;
+  }
+  
+  .featureBlock:last-child {
+    margin-bottom: 0; /* Remove margin for the last feature block */
+  }
+  
+  .featureBlock h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid black; /* Bottom border to titles */
+  }
+  
+  .featureBlock p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-top: 1rem;
+    color: #333; /* Slightly muted text color for contrast */
+  }
+  

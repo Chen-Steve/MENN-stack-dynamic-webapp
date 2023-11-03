@@ -25,13 +25,14 @@
 }
 
 .textBase1 {
-  font-size: 18px;
+  font-size: 20px;
   color: #333;
   margin: 20px 0;
   text-align: left;
 }
 
 .textBase {
+  flex-grow: 1;
   font-size: 14px;
   color: #333;
   margin: 10px 0px;
@@ -42,7 +43,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 0px;
+  margin-right: 10px;
 }
 
 .emailInput {
@@ -50,6 +51,7 @@
   font-size: 16px;      
   padding-left: 10px;    
   padding-right: 10px;   
+  width: 300px;
 }
 
 .subscribeBtn {
@@ -57,8 +59,9 @@
   font-size: 18px;         
   padding-left: 20px; 
   padding-right: 20px; 
+  color: white;
 
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   cursor: pointer; 
   margin-left: 10px;
 }
@@ -110,10 +113,18 @@
   background-size: contain;
 }
 
+.charity {
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  background: url('/bbb-logo.svg') no-repeat center;
+  background-size: contain;
+}
+
 .footerBottom {
-  margin-top: 40px;
+  margin-top: -10px;
   border-top: 1px solid #000000;
-  padding-top: 20px;
+  padding-top: 10px;
   margin-left: 100px;
   margin-right: 100px;
 }

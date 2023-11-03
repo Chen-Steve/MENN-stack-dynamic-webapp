@@ -13,9 +13,9 @@
 
   #content {
     /* padding: 80px 200px; */
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
   }
   .rs-steps-horizontal .rs-steps-item-content {
     text-align: left;

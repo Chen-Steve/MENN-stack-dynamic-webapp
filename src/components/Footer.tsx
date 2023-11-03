@@ -51,6 +51,7 @@ const Footer: React.FC = () => {
 
         </div>
         <div className={styles.comingSoon}>
+            <div className={styles.charity}></div>
         </div>
         <div className={styles.socialLinks}>
             <a href="https://www.instagram.com/servicementoscholars/" target="_blank" rel="noopener noreferrer"  title="Instagram">
@@ -65,7 +66,7 @@ const Footer: React.FC = () => {
             </div>
         </div>
 
-        
+
       <div className={styles.footerBottom}>
         <p className={styles.textBase}>
           © 2023 Servicemen to Scholars. The following trademarks used herein are owned by Servicemen to Scholar's LLC and its affiliates. Servicemen to Scholars LLC. is a nonprofit, tax-exempt charitable organization (tax ID number: 92-3756275) under Section 501(c)(3) of the Internal Revenue Code. Donations are tax-deductible as allowed by law.

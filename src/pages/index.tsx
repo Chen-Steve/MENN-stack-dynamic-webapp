@@ -2,6 +2,7 @@ import React from "react";
 
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
+import Features from "../components/Features";
 import Footer from "../components/Footer";
 
 import "../app/globals.css";
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
         <div>
           <NavBar />
           <Header />
+          <Features />
           <Footer />
         </div>
       </main>

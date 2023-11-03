@@ -36,7 +36,7 @@
 }
 
 .navbarItem:hover {
-  color: #656464;
+  color: #c9c8c8;
 }
 
 .donate, .volunteer {
@@ -54,11 +54,13 @@
 }
 
 .donate:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0, 0.1);
+  color: black;
 }
 
 .volunteer:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
 /* Mobile responsiveness */

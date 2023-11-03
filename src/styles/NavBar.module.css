@@ -1,15 +1,24 @@
 .navbar {
+  z-index: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #000000; /* Increased border size for a more pronounced look */
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .logo {
-  width: 50px;
-  height: auto;
+  width: 200px;
+  height: 200px;
+  background: url('/logo_v2.png') no-repeat center;
+  background-size: contain;
+  flex-shrink: 0;
+  margin-bottom: -150px;
+  margin-top: -50px;
+  z-index: 1;
 }
 
 .navbarItems {
@@ -19,37 +28,70 @@
 
 .navbarItem {
   color: black;
+  font-size: 17px;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
-  font-weight: 500;
+  font-weight: 500;  /* Make font weight slightly bold */
+  line-height: 2.5;  /* Add line height for vertical alignment */
 }
 
 .navbarItem:hover {
-  color: #555;
+  color: #656464;
 }
 
-.donate {
-  border: 2px solid black;
+.donate, .volunteer {
+  border: 1px solid black;
   color: black;
-  padding: 0.48rem 0.98rem;
-  border-radius: 5px;
+  padding: 0rem 1rem; 
+  border-radius: 1px;
   font-weight: bold;
   transition: background-color 0.3s ease-in-out;
-}
-
-.donate:hover {
-  background-color:rgb(152, 145, 145);
 }
 
 .volunteer {
-  border: 2px solid black;
-  color: black;
-  padding: 0.48rem 0.98rem; 
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease-in-out;
+  background-color: black;
+  color: white;
+}
+
+.donate:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 .volunteer:hover {
-  background-color: rgb(221, 213, 213);
+  background-color: rgb(255, 255, 255);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) { /* This will apply the styles to devices with width less than or equal to 768px (typically mobile devices) */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: -50px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbarItems {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px; /* To provide spacing after the logo */
+  }
+
+  .navbarItem {
+    font-size: 15px; /* Slightly reduce the font size for mobile */
+  }
+
+  .donate, .volunteer {
+    padding: 0.5rem 0.5rem; /* Reduce padding for mobile */
+    font-size: 15px; /* Slightly reduce the font size for buttons on mobile */
+  }
 }

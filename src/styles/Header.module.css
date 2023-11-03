@@ -3,7 +3,7 @@
 }
 
 .header {
-    background-color: white;
+    background-color: rgb(246, 246, 246);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: rgb(246, 246, 246);
   padding: 1rem 2rem;
   border-bottom: 1px solid #000000; /* Increased border size for a more pronounced look */
   margin-left: 50px;

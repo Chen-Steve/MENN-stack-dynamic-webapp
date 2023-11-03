@@ -6,7 +6,10 @@ const Features: React.FC = () => {
   return (
     <div className={styles.featuresContainer}>
         <div className={styles.imageArea}>
-            <Image src="/veteran_education.png" alt="Statistic: Number of veterans in the United States in 2021, by educational attainment | Statista"/>
+            <Image src="/veteran_education.png" alt="Statistic: Number of veterans in the United States in 2021, by educational attainment | Statista"
+            width={1000} 
+            height={770}
+            />
         </div>
     <div className={styles.textArea}>
       <div className={styles.featureBlock}>

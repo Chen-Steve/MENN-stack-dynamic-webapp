@@ -89,11 +89,11 @@
   }
 
   .navbarItem {
-    font-size: 10px; /* Slightly reduce the font size for mobile */
+    font-size: 12px; /* Slightly reduce the font size for mobile */
   }
 
   .donate, .volunteer {
-    padding: 0rem 0.7rem; /* Reduce padding for mobile */
-    font-size: 8px; /* Slightly reduce the font size for buttons on mobile */
+    padding: 0rem 0.5rem; /* Reduce padding for mobile */
+    font-size: 12px; /* Slightly reduce the font size for buttons on mobile */
   }
 }

@@ -94,6 +94,6 @@
 
   .donate, .volunteer {
     padding: 0rem 0.7rem; /* Reduce padding for mobile */
-    font-size: 10px; /* Slightly reduce the font size for buttons on mobile */
+    font-size: 8px; /* Slightly reduce the font size for buttons on mobile */
   }
 }

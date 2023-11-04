@@ -68,7 +68,7 @@
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 0.5rem;
     margin-left: 0;
     margin-right: 0;
   }

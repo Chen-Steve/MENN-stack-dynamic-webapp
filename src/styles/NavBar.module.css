@@ -93,7 +93,7 @@
   }
 
   .donate, .volunteer {
-    padding: 0rem 0.5rem; /* Reduce padding for mobile */
+    padding: 0rem 1rem; /* Reduce padding for mobile */
     font-size: 10px; /* Slightly reduce the font size for buttons on mobile */
   }
 }

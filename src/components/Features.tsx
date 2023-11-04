@@ -9,6 +9,15 @@ const Features: React.FC = () => {
             <Image src="/veteran_education.png" alt="Statistic: Number of veterans in the United States in 2021, by educational attainment | Statista"
             width={1000} 
             height={770}
+            loading="lazy"
+
+            />
+        </div>
+        <div className={styles.imageArea2}>
+            <Image src="/veteran_employment.png" alt="Statistic: Employment status of veterans in the United States in 2021, by age | Statista"
+            width={1000} 
+            height={770}
+            loading="lazy"
             />
         </div>
     <div className={styles.textArea}>
@@ -24,6 +33,17 @@ const Features: React.FC = () => {
         <h2>Be part of a Community</h2>
         <p>Our platform connects service people with like-minded individuals, mentors, and experts who can provide valuable support and share their journeys.</p>
       </div>
+
+      <div className={styles.partnersBlock}>
+        <h2 className={styles.partnersTitle}>Our Partners</h2>
+        <p className={styles.partnersDescription}>Coming soon!</p>
+        <div className={styles.partnersList}>
+          {/* Sample logos or names of sponsors. You can replace these with actual sponsor logos or names. */}
+    
+          {/* ... */}
+        </div>
+      </div>
+
     </div>
     </div>
   );

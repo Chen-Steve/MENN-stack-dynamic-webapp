@@ -16,8 +16,17 @@
     transform: scale(0.65);  /* scales the element to 80% of its original size */
     margin-top: -120px;
   }
-  
-  
+
+  .imageArea2 {
+    width: 40%; 
+    height: auto;
+    max-width: 100%;
+    margin-right: 320px;
+    margin-left: -830px;
+    margin-top: 400px;
+    transform: scale(0.65);  /* scales the element to 80% of its original size */
+  }
+
   .textArea {
     flex: 1; /* Takes up the remaining space */
     position: relative;
@@ -56,4 +65,36 @@
     margin-top: 1rem;
     color: #333; /* Slightly muted text color for contrast */
   }
+
+  /* Partners */
+  .partnersBlock {
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 200px;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .partnersTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -160px;
+  }
+
+  .partnersDescription {
+    font-size: 20px;
+    margin-top: 1rem;
+    color: #333; /* Slightly muted text color for contrast */
+  }
+  
+  .partnersList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .partnerItem {
+    margin: 10px;
+  }
+  
   

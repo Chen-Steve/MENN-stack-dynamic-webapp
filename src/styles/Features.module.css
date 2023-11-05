@@ -15,6 +15,7 @@
     margin-left: -150px;
     transform: scale(0.65);  /* scales the element to 80% of its original size */
     margin-top: -120px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
   .imageArea2 {
@@ -24,7 +25,8 @@
     margin-right: 320px;
     margin-left: -830px;
     margin-top: 400px;
-    transform: scale(0.65);  /* scales the element to 80% of its original size */
+    transform: scale(0.65);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
   .textArea {
@@ -70,7 +72,7 @@
   .partnersBlock {
     background-color: #f5f5f5; /* Light gray background */
     padding: 200px;
-    margin-top: 100px;
+    margin-top: 60px;
     text-align: center;
     border-radius: 5px;
   }
@@ -78,7 +80,7 @@
   .partnersTitle {
     font-size: 24px;
     font-weight: bold;
-    margin-top: -160px;
+    margin-top: -120px;
   }
 
   .partnersDescription {

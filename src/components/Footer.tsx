@@ -51,7 +51,9 @@ const Footer: React.FC = () => {
 
         </div>
         <div className={styles.comingSoon}>
+        <a href="https://www.bbb.org/" target="_blank" rel="noopener noreferrer"  title="Instagram">
             <div className={styles.charity}></div>
+        </a>
         </div>
         <div className={styles.socialLinks}>
             <a href="https://www.instagram.com/servicementoscholars/" target="_blank" rel="noopener noreferrer"  title="Instagram">

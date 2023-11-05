@@ -9,15 +9,12 @@ const Features: React.FC = () => {
             <Image src="/veteran_education.png" alt="Statistic: Number of veterans in the United States in 2021, by educational attainment | Statista"
             width={1000} 
             height={770}
-            loading="lazy"
-
             />
         </div>
         <div className={styles.imageArea2}>
             <Image src="/veteran_employment.png" alt="Statistic: Employment status of veterans in the United States in 2021, by age | Statista"
             width={1000} 
             height={770}
-            loading="lazy"
             />
         </div>
     <div className={styles.textArea}>

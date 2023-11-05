@@ -1,0 +1,45 @@
+.bodyContainer {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2.75rem;
+    margin-bottom: 4.5rem;
+    margin-top: -3rem;
+  }
+  
+  .statsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    gap: 100px; /* Space between the stat blocks */
+  }
+  
+  .statBlock {
+    width: calc(33.333% - 20px); /* Subtracting the gap from the width */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    word-wrap: break-word;
+    overflow: hidden;
+    margin: 10px 10px;
+    padding: 30px;
+  }
+  
+  .statBlock h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .statBlock p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 768px) {
+    .statBlock {
+      flex-basis: 100%;
+      margin: 0px 0px;
+    }
+  }

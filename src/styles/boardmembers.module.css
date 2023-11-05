@@ -1,0 +1,144 @@
+.boardMembers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.boardIntro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.introText {
+  max-width: 600px;
+}
+
+.introTitle {
+  font-size: 24px;
+  color: #222; /* Enhanced for better contrast */
+  margin-bottom: 10px;
+}
+
+.introHeading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222; /* Enhanced for better contrast */
+  margin-bottom: 15px;
+}
+
+.introDescription {
+  font-size: 18px;
+  color: #555; /* Adjusted for better readability */
+}
+
+.membersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.memberCard {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;          /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.memberCard:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.memberImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.memberInfo {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.memberName {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222; /* Enhanced for better contrast */
+}
+
+.memberTitle {
+  font-size: 16px;
+  color: #555; /* Adjusted for better readability */
+}
+
+.memberDescription {
+  padding: 15px;
+  font-size: 14px;
+  color: #555;
+  flex-grow: 1; /* This will push the socialIcons to the bottom */
+}
+
+.socialIcons {
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #fff;
+  margin-top: auto; /* Push the social icons to the bottom */
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+}
+
+.socialIcons a {
+  display: inline-block;
+}
+
+.socialIcon:hover,
+.socialIcon:focus {
+  opacity: 0.8; /* Visual feedback for interactions */
+}
+
+.cutBottomImage {
+  overflow: hidden;
+  height: auto; /* Adjust to how much of the image you want to show */
+}
+
+.memberImageWrapper {
+  width: 100%; /* adjust as needed */
+  height: auto; /* adjust as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .introTitle,
+  .memberName {
+    font-size: 1.5rem; /* Larger text on smaller screens */
+  }
+
+  .introHeading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .memberCard {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .membersContainer {
+    gap: 10px;
+  }
+
+  .introDescription,
+  .memberDescription {
+    font-size: 1rem; /* Adjust text size for readability */
+  }
+}

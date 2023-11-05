@@ -1,8 +1,9 @@
 import React from "react";
 
-import NavBar from "../components/NavBar";
+import Navbar from "../components/NavBar";
 import Header from "../components/Header";
 import Features from "../components/Features";
+import Body from "../components/Body";
 import Footer from "../components/Footer";
 
 import "../app/globals.css";
@@ -12,9 +13,10 @@ const Home: React.FC = () => {
     return (
       <main className={styles.main}>
         <div>
-          <NavBar />
+          <Navbar />
           <Header />
           <Features />
+          <Body />
           <Footer />
         </div>
       </main>

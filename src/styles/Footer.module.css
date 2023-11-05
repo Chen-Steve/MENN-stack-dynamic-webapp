@@ -140,8 +140,7 @@
   cursor: pointer;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) { /* Targeting devices with width less than or equal to 768px */
+@media (max-width: 768px) {
 
   .footer {
     padding: 20px 30px;
@@ -149,58 +148,81 @@
 
   .container {
     flex-direction: column;
-    gap: 20px; /* Adds spacing between stacked items */
+    gap: 20px; 
   }
 
   .logoSection {
     width: 90px;
     height: 75px;
-    margin: 0 auto; /* Center the logo */
+    margin: 0 auto;
   }
 
   .newsletter {
     flex-basis: 100%;
     margin-right: 0;
-    text-align: center; /* Center the text for mobile */
+    text-align: center;
   }
 
   .textBase1, .textBase {
-    text-align: center; /* Center the text for mobile */
+    text-align: center; 
   }
 
   .emailSection {
-    flex-direction: column; /* Stack the input and button vertically */
-    gap: 10px; /* Adds spacing between stacked items */
+    flex-direction: column;
+    gap: 10px; 
     align-items: center;
   }
 
   .emailInput {
-    width: 100%; /* Take full width */
+    width: 100%;
   }
 
   .subscribeBtn {
-    width: 100%; /* Take full width */
+    width: 100%; 
   }
-
+  .socialLinks {
+    flex-basis: 100%;
+    margin: 0; 
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: row; 
+    gap: 10px; 
+  }
   .comingSoon, .socialLinks {
     flex-basis: 100%;
     margin-left: 0;
     margin-top: 0;
-    text-align: center; /* Center the text for mobile */
+    margin-bottom: 30px;
+    text-align: center; 
+  }
+
+  .charity {
+    margin-top: -10px;
+    margin-bottom: -30px;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 150px; 
+    height: 150px;
   }
 
   .instagramIcon, .linkedinIcon, .xIcon {
-    margin: 0 auto; /* Center the icons */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footerBottom {
     margin-left: 30px;
     margin-right: 30px;
-    text-align: center; /* Center the text for mobile */
+    text-align: center; 
   }
 
   .footerLinks {
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: row; 
     gap: 10px;
+    align-items: center;
+    justify-content: center; 
+    width: 100%; 
   }
 }

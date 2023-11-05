@@ -104,7 +104,7 @@ const BoardMembers: React.FC = () => {
       name: 'Caleb Schultz',
       title: 'COO',
       description: 'Caleb Schultz is a student at Brown University studying the intersection of computer science and neuroscience      ',
-      imageUrl: '/Caleb.jfif',
+      imageUrl: '/caleb.jfif',
       socials: {
         "twitter": {
           "icon": "/x_twitter.svg",

@@ -7,8 +7,8 @@ const Body: React.FC = () => {
       <h1 className={styles.title}>Charting New Horizons for Military Scholars</h1>
       <div className={styles.statsContainer}>
         <div className={styles.statBlock}>
-          <h2>$274 Million</h2>
-          <p>On average undergraduate students receiving between $8,000 to $15,100 on average, and graduate students receiving an average of $16,200, or $10,400 when excluding housing.</p>
+          <h2>$274 Million in Fundings</h2>
+          <p>According to a report by the National Center for Education Statistics (NCES), students receive substantial education benefits, with undergraduates receiving between $8,000 to $15,100 on average, and graduate students receiving an average of $16,200, or $10,400 when excluding housing.</p>
         </div>
         <div className={styles.statBlock}>
           <h2>Maximize Veteran Benefits in Higher Education</h2>

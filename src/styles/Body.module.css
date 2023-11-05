@@ -13,17 +13,18 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap; /* Wrap items on smaller screens */
-    gap: 100px; /* Space between the stat blocks */
+    flex-wrap: wrap; 
+    gap: 100px; 
   }
   
   .statBlock {
-    width: calc(33.333% - 20px); /* Subtracting the gap from the width */
+    width: calc(33.333% - 20px); 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     word-wrap: break-word;
     overflow: hidden;
     margin: 10px 10px;
     padding: 30px;
+    border: 2px solid #000;
   }
   
   .statBlock h2 {
@@ -36,7 +37,6 @@
     line-height: 1.4;
   }
   
-  /* Responsive layout for smaller screens */
   @media (max-width: 768px) {
     .statBlock {
       flex-basis: 100%;

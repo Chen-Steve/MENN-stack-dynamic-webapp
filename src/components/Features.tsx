@@ -30,7 +30,7 @@ const Features: React.FC = () => {
       </div>
       <div className={styles.featureBlock}>
         <h2>AI-customized for You </h2>
-        <p>Based on your unique educational goals and challenges. Our platform offers personalized guidance to help them navigate the higher education landscape and make informed decisions.</p>
+        <p>Based on your unique educational goals and challenges. Our platform offers personalized guidance to help you navigate the higher education landscape and make informed decisions.</p>
       </div>
       <div className={styles.featureBlock}>
         <h2>Be part of a Community</h2>

@@ -1,0 +1,82 @@
+.container {
+    width: 100%; /* Full width */
+  min-height: 100vh; /* Full viewport height */
+  max-height: 100vh; /* Ensure it doesn't grow beyond the viewport height */
+  padding: 30px;
+  background: #f5e5b8; /* Background color */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; /* Center the content vertically if there's extra space */
+  margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .description {
+    text-align: center;
+    color: #333;
+    margin-bottom: 55px;
+    font-size: 12px; /* Adjusted to match the image */
+    font-family: Arial, sans-serif; /* Add a default font-family */
+  }
+  .title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 0px;
+    font-size: 40px; /* Adjusted to match the image */
+    font-family: Arial, sans-serif; /* Add a default font-family */
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+    width: 100%; /* Full width of the container */
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-family: Arial, sans-serif; /* Ensure the font is consistent */
+  }
+  
+  .formGroup input[type="text"],
+  .formGroup input[type="tel"],
+  .formGroup input[type="email"] {
+    font-size: 20px; /* Consistent font size */
+    width: 100%; /* Full width of the formGroup */
+    padding: 10px; /* Consistent padding */
+    border: none; /* Borders removed */
+    border-bottom: 1px solid #333; /* Only bottom border */
+    background-color: transparent; /* No background color */
+    box-sizing: border-box;
+    color: #333; /* Text color for input */
+    flex-shrink: 0; /* Prevent the input from shrinking */
+    font-family: Arial, sans-serif; /* Ensure the font is consistent */
+  }
+  
+  .formGroup input::placeholder {
+    color: #aaa; /* Lighter placeholder color */
+    font-family: Arial, sans-serif; /* Consistent typography for placeholder */
+  }
+  
+  .formGroup input[type="text"]:focus,
+  .formGroup input[type="tel"]:focus,
+  .formGroup input[type="email"]:focus {
+    border-color: #888;
+    outline: none;
+  }
+  
+  .submitButton {
+    padding: 8px 18px; /* Provide sufficient padding for the button */
+    border: none; /* Borders removed */
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    font-family: Arial, sans-serif; /* Consistent typography */
+  }
+  
+  .submitButton:hover {
+    background-color: #555;
+  }  

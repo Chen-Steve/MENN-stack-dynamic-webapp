@@ -1,10 +1,13 @@
 import React from 'react';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router'; 
 import Head from 'next/head';
 import styles from '../styles/signup.module.css';
 import '../app/signup.css';
 
 const Signup: NextPage = () => {
+  const router = useRouter(); 
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -24,8 +27,24 @@ const Signup: NextPage = () => {
 
     console.log(formData);
 
-    // You would handle form submission here,
-    // possibly sending the form data to your backend server
+    try {
+      const response = await fetch('http://localhost:5000/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      // Handle success - maybe redirect to a thank you page or clear the form
+      router.push('/'); // Use the router to navigate to the landing page
+    } catch (error) {
+      console.error('There was an error!', error);
+      // Handle errors - show user a message, etc.
+    }
   };
 
   return (

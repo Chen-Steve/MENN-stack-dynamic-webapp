@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router'; 
 import Head from 'next/head';
@@ -6,44 +6,54 @@ import styles from '../styles/signup.module.css';
 import '../app/signup.css';
 
 const Signup: NextPage = () => {
-  const router = useRouter(); 
+  const router = useRouter();
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    serviceStatus: '',
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  console.log('Submitting form data:', formData);
+
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const target = event.target as typeof event.target & {
-      firstName: { value: string };
-      lastName: { value: string };
-      phone: { value: string };
-      email: { value: string };
-    };
+    if (step === 1) {
+      // Move to the next step
+      setStep(step + 1);
+    } else {
+      // Submit the form
+      console.log(formData);
 
-    const formData = {
-      firstName: target.firstName.value,
-      lastName: target.lastName.value,
-      phone: target.phone.value,
-      email: target.email.value,
-    };
+      try {
+        const response = await fetch('http://localhost:5000/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
 
-    console.log(formData);
-
-    try {
-      const response = await fetch('http://localhost:5000/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        // Handle success
+        router.push('/'); // Navigate to the landing page
+      } catch (error) {
+        console.error('There was an error!', error);
       }
-      // Handle success - maybe redirect to a thank you page or clear the form
-      router.push('/'); // Use the router to navigate to the landing page
-    } catch (error) {
-      console.error('There was an error!', error);
-      // Handle errors - show user a message, etc.
     }
   };
 
@@ -53,28 +63,92 @@ const Signup: NextPage = () => {
         <title>Contact Information</title>
       </Head>
       <main className={styles.container}>
-        <h1 className={styles.title}>First, your contact information</h1>
+        <h1 className={styles.title}>
+          {step === 1 ? 'First, your contact information' : 'Are you currently active duty, a reservist, or a veteran?*'}
+        </h1>
         <p className={styles.description}>* indicates a required field</p>
         <form onSubmit={handleSubmit} className={styles.form}>
+        {step === 1 && (
+          <>
           <div className={styles.formGroup}>
             <label htmlFor="firstName" className={styles.label}>First name*</label>
-            <input type="text" id="firstName" name="firstName" required className={styles.input} />
+            <input 
+              type="text" 
+              id="firstName" 
+              name="firstName" 
+              required className={styles.input} 
+              value={formData.firstName} // Controlled component
+              onChange={handleInputChange} // Update state on change
+              />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="lastName" className={styles.label}>Last name*</label>
-            <input type="text" id="lastName" name="lastName" required className={styles.input} />
+            <input 
+              type="text" 
+              id="lastName" 
+              name="lastName" 
+              required className={styles.input} 
+              value={formData.lastName} // Controlled component
+              onChange={handleInputChange}
+              />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="phone" className={styles.label}>Phone number</label>
-            <input type="tel" id="phone" name="phone" required pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(201) 555-0123" className={styles.input} />
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              required pattern="^\(\d{3}\) \d{3}-\d{4}$" 
+              placeholder="(201) 555-0123" 
+              className={styles.input} 
+              value={formData.phone} // Controlled component
+              onChange={handleInputChange}
+              />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="email" className={styles.label}>Email*</label>
-            <input type="email" id="email" name="email" required className={styles.input} />
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required className={styles.input} 
+              value={formData.email} // Controlled component
+              onChange={handleInputChange}
+              />
           </div>
           <div className={styles.formGroup}>
             <button type="submit" className={styles.submitButton}>ENTER</button>
           </div>
+          </>
+        )}
+
+          {step === 2 && (
+            <>
+              {/* Military Status Field */}
+              <div className={styles.formGroup}>
+                <label htmlFor="serviceStatus" className={styles.label}>Military Status*</label>
+                <select
+                  id="serviceStatus"
+                  name="serviceStatus"
+                  value={formData.serviceStatus}
+                  onChange={handleInputChange}
+                  required
+                  className={styles.select}
+                >
+                  <option value="">Select an option</option>
+                  <option value="Active Duty">Active Duty</option>
+                  <option value="Reservist">Reservist</option>
+                  <option value="Veteran">Veteran</option>
+                  <option value="National Guard">National Guard</option>
+                  <option value="Interested">Not currently serving, but interested in military-affiliated educational resources</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+              </div>
+              <div className={styles.formGroup}>
+                <button type="submit" className={styles.submitButton}>Submit</button>
+              </div>
+            </>
+          )}
         </form>
       </main>
     </>

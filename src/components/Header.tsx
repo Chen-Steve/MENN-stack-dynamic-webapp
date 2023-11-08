@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from '../styles/Header.module.css';
 
 const Header: React.FC = () => {
@@ -18,7 +19,7 @@ const Header: React.FC = () => {
             {/*We provide a platform for veterans to connect with mentors, find scholarships, and learn about the college application process.*/}
             <div className={styles.actionSection}>
               <button className={styles.learnMoreBtn}>Learn More</button>
-              <button className={styles.signUpBtn}>Sign Up</button>
+              <Link href="/signup" className={styles.signUpBtn}>Sign Up</Link>
             </div>
           </div>
         </div>

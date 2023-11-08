@@ -80,3 +80,26 @@
   .submitButton:hover {
     background-color: #555;
   }  
+
+  .select {
+    font-size: 20px; /* Consistent font size */
+    width: 100%; /* Full width of the formGroup */
+    padding: 10px; /* Consistent padding */
+    border: 1px solid #333; /* Border to match the text inputs */
+    border-radius: 4px; /* Optional: rounded corners */
+    background-color: #fff; /* White background */
+    box-sizing: border-box;
+    color: #333; /* Text color for input */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    appearance: none; /* Remove default arrow in modern browsers */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%; /* Position the arrow icon */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  .select:focus {
+    border-color: #888;
+    outline: none;
+  }

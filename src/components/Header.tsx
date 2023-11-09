@@ -18,7 +18,7 @@ const Header: React.FC = () => {
             </p>
             {/*We provide a platform for veterans to connect with mentors, find scholarships, and learn about the college application process.*/}
             <div className={styles.actionSection}>
-              <Link href="//chat.openai.com/g/g-z9E31ofob-scholarship-finder-for-servicemen"className={styles.learnMoreBtn} target="_blank" rel="noopener noreferrer">Try our GPT!</Link>
+              <Link href="https://chat.openai.com/g/g-z9E31ofob-scholarship-finder-for-servicemen"className={styles.learnMoreBtn} target="_blank" rel="noopener noreferrer">Try our GPT!</Link>
               <Link href="/signup" className={styles.signUpBtn}>Sign Up</Link>
             </div>
           </div>

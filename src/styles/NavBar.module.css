@@ -90,11 +90,11 @@
   }
 
   .navbarItem {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .donate, .volunteer {
-    padding: 0rem 1.5rem; 
+    padding: 0rem 1rem; 
     font-size: 12px;
   }
   /* iPhone X, XS, 11 Pro, 12 Mini, 13 Mini (375px) */

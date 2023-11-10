@@ -63,8 +63,7 @@
   color: white;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) { /* This will apply the styles to devices with width less than or equal to 768px (typically mobile devices) */
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -84,16 +83,77 @@
 
   .navbarItems {
     width: 100%;
-    justify-content: space-between;
-    margin-top: 50px; /* To provide spacing after the logo */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 50px;
+    gap: 0.3rem;
   }
 
   .navbarItem {
-    font-size: 12px; /* Slightly reduce the font size for mobile */
+    font-size: 10px;
   }
 
   .donate, .volunteer {
-    padding: 0rem 0.5rem; /* Reduce padding for mobile */
-    font-size: 12px; /* Slightly reduce the font size for buttons on mobile */
+    padding: 0rem 0rem; 
+    font-size: 12px;
   }
+  /* iPhone X, XS, 11 Pro, 12 Mini, 13 Mini (375px) */
+@media (max-width: 375px) {
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust padding */
+  }
+
+  .logo {
+    width: 80px; /* Adjust logo size */
+    height: 80px;
+    margin-bottom: -40px; /* Adjust negative margin if needed */
+  }
+
+  .navbarItems {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center; /* Center items */
+    gap: 0.5rem; /* Adjust gap between items */
+  }
+
+  .navbarItem,
+  .donate,
+  .volunteer {
+    font-size: 14px; /* Adjust font size */
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .donate, .volunteer {
+    width: 100%; /* Make buttons full width */
+    text-align: center; /* Center text in buttons */
+    margin-bottom: 0.5rem; /* Add margin to the bottom of buttons */
+  }
+}
+
+/* iPhone 6, 6S, 7, 8, SE (320px) */
+@media (max-width: 320px) {
+  .navbar {
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .logo {
+    width: 70px; /* Adjust logo size */
+    height: 70px;
+    margin-bottom: -35px; /* Adjust negative margin if needed */
+  }
+
+  .navbarItems {
+    gap: 0.3rem; /* Adjust gap between items */
+  }
+
+  .navbarItem,
+  .donate,
+  .volunteer {
+    font-size: 12px; /* Adjust font size */
+    padding: 0.3rem; /* Adjust padding */
+  }
+
+  .donate, .volunteer {
+    padding: 0.3rem 0.5rem; /* Adjust padding for buttons */
+  }
+}
 }

@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router'; 
-import Head from 'next/head';
+import type { Metadata } from 'next'
 import styles from '../styles/signup.module.css';
 import '../app/signup.css';
+
+export const metadata: Metadata = {
+  title: 'Contact Information',
+  // Add more metadata fields if needed
+};
 
 const Signup: NextPage = () => {
   const router = useRouter();
@@ -59,9 +64,6 @@ const Signup: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Contact Information</title>
-      </Head>
       <main className={styles.container}>
         <h1 className={styles.title}>
           {step === 1 ? 'First, your contact information' : 'Are you currently active duty, a reservist, or a veteran?*'}

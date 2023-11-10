@@ -86,7 +86,7 @@
     flex-direction: row; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
     margin-top: 50px;
-    gap: 0.3rem;
+    gap: 0.5rem;
   }
 
   .navbarItem {
@@ -94,7 +94,7 @@
   }
 
   .donate, .volunteer {
-    padding: 0rem 0rem; 
+    padding: 0rem 0.5rem; 
     font-size: 12px;
   }
   /* iPhone X, XS, 11 Pro, 12 Mini, 13 Mini (375px) */

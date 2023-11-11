@@ -57,6 +57,7 @@ const Signup: NextPage = () => {
         // Handle success
         router.push('/'); // Navigate to the landing page
       } catch (error) {
+        // Handle error
         console.error('There was an error!', error);
       }
     }

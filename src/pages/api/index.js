@@ -1,39 +1,24 @@
-import { MongoClient, ServerApiVersion } from 'mongodb';
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
-let client;
-let clientPromise;
+const credentials = 'X509-cert-8862835702141572869.pem'
 
-const uri = process.env.MONGODB_URI;
-const certBase64 = process.env.MONGODB_TLS_CERT;
-const cert = Buffer.from(certBase64, 'base64');
+const client = new MongoClient('mongodb+srv://cluster0.4ws1dla.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority', {
+  tlsCertificateKeyFile: credentials,
+  serverApi: ServerApiVersion.v1
+});
 
-if (!global._mongoClientPromise) {
-  client = new MongoClient(uri, {
-    tls: true,
-    tlsCAFile: cert,
-    serverApi: ServerApiVersion.v1
-  });
-  global._mongoClientPromise = client.connect();
-}
-
-clientPromise = global._mongoClientPromise;
-
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
-
+async function run() {
   try {
-    const client = await clientPromise;
-    const db = client.db('user_management');
-    const users = db.collection('users');
-
-    // Add input validation here
-
-    const result = await users.insertOne(req.body);
-    res.status(201).json(result);
-  } catch (error) {
-    console.error('Error inserting user data:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    await client.connect();
+    const database = client.db("testDB");
+    const collection = database.collection("testCol");
+    const docCount = await collection.countDocuments({});
+    console.log(docCount);
+    // perform actions using client
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
   }
 }
+
+run().catch(console.dir);

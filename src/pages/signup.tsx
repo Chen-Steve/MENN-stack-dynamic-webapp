@@ -7,7 +7,6 @@ import '../app/signup.css';
 
 export const metadata: Metadata = {
   title: 'Contact Information',
-  // Add more metadata fields if needed
 };
 
 const Signup: NextPage = () => {
@@ -29,16 +28,17 @@ const Signup: NextPage = () => {
     }));
   };
 
+
   console.log('Submitting form data:', formData);
 
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    console.log("Form submitted"); 
 
     if (step === 1) {
-      // Move to the next step
       setStep(step + 1);
-    } else {
+    } else if (step === 2) {
       // Submit the form
       console.log(formData);
 
@@ -54,8 +54,9 @@ const Signup: NextPage = () => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        // Handle success
-        router.push('/'); // Navigate to the landing page
+
+        console.log("Form submitted successfully");
+        router.push('/');
       } catch (error) {
         // Handle error
         console.error('There was an error!', error);

@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
                 <Link href="#resources" className={styles.navbarItem}>Resources</Link>
                 <Link href="/team" className={styles.navbarItem}>Team</Link>
                 <a href="https://donate.stripe.com/aEU7sRd6j3lE59u3cc" className={`${styles.navbarItem} ${styles.donate}`} target="_blank" rel="noopener noreferrer">Donate</a>
-                <Link href="/login" className={`${styles.navbarItem} ${styles.volunteer}`}>Login</Link>
+                <Link href="/login" className={`${styles.navbarItem} ${styles.volunteer}`}>Coming Soon!</Link>
             </div>
         </div>
     );

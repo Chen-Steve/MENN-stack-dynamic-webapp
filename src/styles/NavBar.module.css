@@ -97,6 +97,8 @@
     padding: 0rem 1rem; 
     font-size: 12px;
   }
+
+
   /* iPhone X, XS, 11 Pro, 12 Mini, 13 Mini (375px) */
 @media (max-width: 375px) {
   .navbar {

@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import Link from 'next/link';
+import PrivacyPolicy from '../pages/privacy'; 
 
 import styles from '../styles/Footer.module.css';
 
@@ -56,18 +58,11 @@ const Footer: React.FC = () => {
         </a>
         </div>
         <div className={styles.socialLinks}>
-            <a href="https://www.instagram.com/servicementoscholars/" target="_blank" rel="noopener noreferrer"  title="Instagram">
-                <div className={styles.instagramIcon}></div>
-            </a>
-            <a href="https://www.linkedin.com/company/servicemen-to-scholars/" target="_blank" rel="noopener noreferrer"  title="LinkedIn">
-                <div className={styles.linkedinIcon}></div>
-            </a>
-            <a href="https://twitter.com/service2scholar?s=20" target="_blank" rel="noopener noreferrer"  title="X">
-                <div className={styles.xIcon}></div>
-            </a>
-            </div>
+          <a href="https://www.instagram.com/servicementoscholars/" target="_blank" rel="noopener noreferrer" className={styles.instagramIcon} title="Instagram"></a>
+          <a href="https://www.linkedin.com/company/servicemen-to-scholars/" target="_blank" rel="noopener noreferrer" className={styles.linkedinIcon} title="LinkedIn"></a>
+          <a href="https://twitter.com/service2scholar?s=20" target="_blank" rel="noopener noreferrer" className={styles.xIcon} title="X"></a>
         </div>
-
+      </div>
 
       <div className={styles.footerBottom}>
         <p className={styles.textBase}>
@@ -75,7 +70,9 @@ const Footer: React.FC = () => {
         </p>
         <div className={styles.footerLinks}>
           <p className={`${styles.textXs} ${styles.underline}`}>
+          <Link href="/privacy" className={`${styles.textXs} ${styles.underline}`}>
             Privacy Policy
+            </Link>
           </p>
           <p className={`${styles.textXs} ${styles.underline}`}>
             Terms of Service

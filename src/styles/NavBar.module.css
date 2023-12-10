@@ -4,10 +4,11 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(246, 246, 246);
-  padding: 1rem 2rem;
+  padding: clamp(0.5rem, 1vw + 1rem, 1.2rem);
   border-bottom: 1px solid #000000; /* Increased border size for a more pronounced look */
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-image: linear-gradient(to right, #96b1d5, #e8ebef 50%);
 }
 
 .logo {
@@ -23,33 +24,55 @@
 
 .navbarItems {
   display: flex;
-  gap: 1.5rem;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
 }
 
 .navbarItem {
-  color: black;
-  font-size: 17px;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
-  font-weight: 500;  /* Make font weight slightly bold */
-  line-height: 2.5;  /* Add line height for vertical alignment */
+  font-size: clamp(12px, 2vw, 21px);
+  font-weight: 500;
+  line-height: 2;
+  position: relative;
+  z-index: 1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #22509D, #23abd4 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbarItem:before {
+  content: "";
+  width: 0;
+  height: 3px;
+  bottom: -2px;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  background: #23abd4;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbarItem:hover {
-  color: #c9c8c8;
+  background-position: 0%;
+}
+
+.navbarItem:hover:before {
+  width: 100%;
 }
 
 .donate, .volunteer {
   border: 1px solid black;
   color: black;
-  padding: 0rem 1rem; 
+  padding: 0rem 1rem;
   border-radius: 1px;
   font-weight: bold;
   transition: background-color 0.3s ease-in-out;
 }
 
 .volunteer {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: white;
 }
 

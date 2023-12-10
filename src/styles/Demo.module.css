@@ -1,0 +1,65 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 40px; 
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif; 
+}
+
+.header {
+  grid-column: 1 / -1;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #0056b3; 
+}
+
+.card {
+  max-width: 800px; 
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px; 
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-bottom: 20px; 
+  border-left: 4px solid #0056b3;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.search {
+  width: 100%;
+  max-width: 600px;
+  padding: 16px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  border: 2px solid #d0d7de;
+  font-size: 1em;
+}
+
+.button {
+  background-color: #0056b3; 
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1em;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #003d82; 
+  color: white; 
+}

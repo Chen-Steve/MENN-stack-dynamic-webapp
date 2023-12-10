@@ -2,8 +2,9 @@
     background-color: rgb(246, 246, 246);
     display: flex;
     flex-direction: row;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #96b1d5, #e8ebef 50%);
   }
   
   .main-logo {

@@ -18,7 +18,7 @@ const PrivacyPolicy: React.FC = () => {
 
                     <section className={privacyStyles.section}>
                         <p className={privacyStyles.sectionContent}>
-                            This privacy notice for <strong>Servicemen to Scholars LLC</strong> (doing business as S2S) ("we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:
+                            This privacy notice for <strong>Servicemen to Scholars LLC</strong> (doing business as S2S) (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), describes how and why we might collect, store, use, and/or share (&quot;process&quot;) your information when you use our services (&quot;Services&quot;), such as when you:
                         </p>
                         <ul>
                             <li>Visit our website at servicementoscholars.org, or any website of ours that links to this privacy notice</li>

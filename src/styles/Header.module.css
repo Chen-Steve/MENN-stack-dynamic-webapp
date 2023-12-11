@@ -14,7 +14,7 @@
 }
 
 .header .titleFirstLine {
-    padding-top: 60px; /* Removes the margin below the first line to stack it close to the second line */
+    padding-top: 60px;
 }
 
 .header .container {
@@ -75,6 +75,6 @@
 }
 
 .header .signUpBtn:hover {
-    background-color: #db4f51;
+    background-color: #ef5659;
     color: rgb(0, 0, 0);
 }

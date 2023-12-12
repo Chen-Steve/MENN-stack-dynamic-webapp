@@ -1,0 +1,81 @@
+.sidebar {
+    width: 250px; /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .logo {
+    /* Style your logo container */
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .avatar {
+    width: 48px; /* Adjust size as needed */
+    border-radius: 100%;
+    margin-bottom: 10px;
+    border: 5px solid #eef4ff; 
+  }
+  
+  .userName {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .navMenu {
+    width: 100%;
+  }
+  
+  .navList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navItem {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navItem:hover,
+  .navItem.active {
+    background-color: #eef4ff; /* Light blue background for active/hover state */
+  }
+  
+  .cta {
+    margin-top: auto; /* Pushes the CTA to the bottom */
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .upgradeBtn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold; /* Adjust font weight if needed */
+    font-size: 1rem; /* Adjust font size to match the image */
+    padding: 15px 30px; /* Adjust padding to match the image */
+  }
+  
+  .upgradeBtn:hover {
+    background-color: #003d82;
+  }
+  

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import scholarshipsData from '../scholarships/scholarships.json';
-import styles from '../styles/Demo.module.css';
 import Link from 'next/link';
+import styles from '../styles/ScholarshipList.module.css';
 
 interface Scholarship {
   title: string;
@@ -12,7 +12,7 @@ interface Scholarship {
   application_deadline: string;
 }
 
-const Demo: React.FC = () => {
+const ScholarshipList: React.FC = () => {
   const [scholarships, setScholarships] = useState<Scholarship[]>(scholarshipsData);
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(false);
@@ -23,7 +23,6 @@ const Demo: React.FC = () => {
     fetch('https://demo.ckan.org/api/3/action/group_list')
       .then(response => response.json())
       .then((data) => {
-        // Assuming the API returns scholarships in a compatible format
         setScholarships(prevScholarships => [...prevScholarships, ...data.result]);
         setLoading(false);
       })
@@ -52,8 +51,8 @@ const Demo: React.FC = () => {
       {error && <p>{error}</p>}
       {!loading && filteredScholarships.length === 0 && <p>No scholarships found.</p>}
       {filteredScholarships.map((scholarship, index) => (
-      <div key={index} className={styles.card}>
-        <h2>{scholarship.title}</h2>
+        <div key={index} className={styles.card}>
+          <h2>{scholarship.title}</h2>
           <p>{scholarship.description.join(' ')}</p>
           <p>Applicable for: {scholarship.applicable_for}</p>
           <p>Deadline: {scholarship.application_deadline}</p>
@@ -65,4 +64,4 @@ const Demo: React.FC = () => {
   );
 };
 
-export default Demo;
+export default ScholarshipList;

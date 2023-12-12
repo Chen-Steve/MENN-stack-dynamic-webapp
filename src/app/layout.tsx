@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
+import {NextUIProvider} from "@nextui-org/react";
 
 interface RootLayoutProps {
   children: ReactNode;

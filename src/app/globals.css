@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Global Variables */
 :root {
   /* TODO: Replace these placeholders with actual values */

@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '../styles/NavBar.module.css';
 import Link from 'next/link';
-import { Content } from "../Dashboard/components/home/content";
 
 const Navbar: React.FC = () => {
     return (
